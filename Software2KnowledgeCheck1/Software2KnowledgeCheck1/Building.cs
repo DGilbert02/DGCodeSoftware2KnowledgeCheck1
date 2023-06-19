@@ -12,4 +12,31 @@ namespace Software2KnowledgeCheck1
 
         public int StreetNumber { get; set; }
     }
+    internal class BuildingMethod
+    {
+        public bool ConstructBuilding<T>(List<string> materials, bool permit, bool zoning) where T : Building
+        {
+            if (permit && zoning)
+            {
+                foreach (var material in materials)
+                {
+                    if (material == "concrete")
+                    {
+                        // start laying foundation
+                    }
+                    else if (material == "Steel")
+                    {
+                        // Start building structure
+                    }
+                    // etc etc...
+
+                }
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
 }
